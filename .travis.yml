@@ -2,6 +2,10 @@ language: java
 services:
   - docker
 script: 
-  ./gradlew clean bootRepackage
-  docker build -t prodest/portaldeservicos
-#  docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
+  ./gradlew clean bootRepackage && docker build -t prodest/portaldeservicos
+deploy:
+  provider: script
+  script: docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD" && docker push  prodest/portaldeservicos
+  on:
+    branch: publish
+
