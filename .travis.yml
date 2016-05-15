@@ -1,6 +1,7 @@
 language: java
 services:
   - docker
-script: ./gradlew clean bootRepackage
-#  docker build -t prodest/portaldeservicos
+script: 
+  ./gradlew clean bootRepackage
+  docker build -t prodest/portaldeservicos
 #  docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
