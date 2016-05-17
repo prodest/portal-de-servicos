@@ -4,7 +4,7 @@
 Portal de Serviços
 ====
 
-Este é o repositório oficial do Portal de Serviços, disponível em http://servicos.gov.br.
+Este é o repositório oficial do Portal de Serviços do Governo do Espírito Santo. Fork do projeto http://servicos.gov.br.
 
 Documentação
 -----
