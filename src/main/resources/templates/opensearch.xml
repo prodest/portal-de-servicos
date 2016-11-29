@@ -3,8 +3,8 @@
         xmlns="http://a9.com/-/spec/opensearch/1.1/"
         xmlns:th="http://www.thymeleaf.org">
     <ShortName>Portal de Serviços</ShortName>
-    <LongName>Portal de Serviços do Governo do Brasil</LongName>
-    <Description>Procure serviços do Governo do Brasil</Description>
+    <LongName>Portal de Serviços do Governo do Estado do Espírito Santo</LongName>
+    <Description>Procure serviços do Governo do Estado do Espírito Santo</Description>
     <Tags>serviços governo</Tags>
     <Contact>servicos@planejamento.gov.br</Contact>
     <Url type="text/html" th:attr="template=${@baseUrl.and('/busca?q={searchTerms}')}"/>

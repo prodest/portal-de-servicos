@@ -1,25 +1,34 @@
-FROM java:openjdk-8u72-jdk
+FROM centos:centos7
 
+#pŕepare environment
+RUN rpm --import http://repos.azulsystems.com/RPM-GPG-KEY-azulsystems && \
+    curl -s -o /etc/yum.repos.d/zulu.repo http://repos.azulsystems.com/rhel/zulu.repo && \
+    yum -y update && \
+    yum -y install zulu-8-8.13.0.5-1 epel-release && \
+    yum -y install nodejs  && \
+    curl -s -L -o /usr/bin/jq https://github.com/stedolan/jq/releases/download/jq-1.5/jq-linux64 && chmod +x /usr/bin/jq
 
-#RUN rpm --import http://repos.azulsystems.com/RPM-GPG-KEY-azulsystems
-#UN curl -s -o /etc/yum.repos.d/zulu.repo http://repos.azulsystems.com/rhel/zulu.repo
-#RUN yum -y update
-#RUN yum -y install zulu-8-8.13.0.5-1
-#RUN curl -s -L -o /usr/bin/jq https://github.com/stedolan/jq/releases/download/jq-1.5/jq-linux64 && chmod +x /usr/bin/jq
+# environment default env
+ENV JAVA_HOME "/usr/lib/jvm/zulu-8"
+ENV JAVA_OPTS: '-Dfile.encoding=UTF-8 -Xms256M -Xmx1G -Djava.awt.headless=true -XX:+UseParNewGC -XX:+UseConcMarkSweepGC -XX:CMSInitiatingOccupancyFraction=75 -XX:+UseCMSInitiatingOccupancyOnly -XX:+HeapDumpOnOutOfMemoryError -XX:+DisableExplicitGC'
+ENV SPRING_THYMELEAF_CACHE 'true'
+ENV FLAGS_GIT_PUSH 'true'
+ENV ENDPOINTS_ENABLED 'false'
+ENV ENDPOINTS_JOLOKIA_ENABLED 'false'
+ENV ENDPOINTS_INFO_ENABLED 'true'
+ENV ENDPOINTS_HEALTH_ENABLED 'true'
+ENV ENDPOINTS_HEALTH_SENSITIVE 'false'
 
-#ENV JAVA_HOME /usr/lib/jvm/zulu-8
-
-ADD ./build/distributions /opt/portal-de-servicos
-WORKDIR /opt/portal-de-servicos
-
-#RUN curl -L -u ${SNAP_API_KEY} https://api.snap-ci.com/project/servicosgovbr/portal-de-servicos/branch/master/pipelines/${SNAP_PIPELINE_COUNTER} | jq '.stages[].workers[].artifacts[].download_url' | grep rpm | x
-#args curl -o portal-de-servicos-latest.rpm -L -u ${SNAP_API_KEY} && yum install -y portal-de-servicos-latest.rpm
-
-
-
-RUN tar xvf portal-de-servicos-1.0.0.tar
-
-WORKDIR /opt/portal-de-servicos/portal-de-servicos-1.0.0/bin
-
+#build
+ADD . build
+WORKDIR build
+RUN ./gradlew assembleMainDist && \
+    cp -rf ./build/distributions/*.tar / && \
+    mkdir /portal && \
+    tar xvf /*.tar -C /editor --strip-components=1
+    #rm -rf ./build
 EXPOSE 8080
-CMD ./portal-de-servicos
+#run cmd
+CMD /portal/bin/portal-de-servicos
+
+
