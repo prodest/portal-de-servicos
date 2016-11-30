@@ -1,5 +1,6 @@
 package br.gov.servicos.servico;
 
+import br.gov.servicos.orgao.Siorg;
 import br.gov.servicos.v3.schema.AreaDeInteresse;
 import br.gov.servicos.v3.schema.OrgaoXML;
 import br.gov.servicos.v3.schema.SegmentoDaSociedade;
@@ -11,10 +12,13 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.elasticsearch.core.query.NativeSearchQueryBuilder;
 import org.springframework.data.elasticsearch.repository.ElasticsearchRepository;
 
+import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 import static java.lang.Integer.MAX_VALUE;
 import static java.util.Collections.singletonList;
+import static java.util.Collections.singletonMap;
 import static java.util.stream.Collectors.toList;
 import static org.elasticsearch.search.sort.SortOrder.ASC;
 
@@ -45,4 +49,20 @@ public interface ServicoRepository extends ElasticsearchRepository<ServicoXML, S
                 .build())
                 .getContent();
     }
+
+    default ServicoXML findById(String id) {
+        Iterator<ServicoXML> result =  search(new NativeSearchQueryBuilder()
+                .withFilter(new TermFilterBuilder("id", (Object) id))
+                .build())
+                .getContent().iterator();
+
+        if (result.hasNext()) {
+            return result.next();
+        } else
+        {
+            return null;
+        }
+    }
+
 }
+

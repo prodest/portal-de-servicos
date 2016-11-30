@@ -55,8 +55,8 @@ public class Importador {
 
         retorno.put("servicos", servicos.importar(repositorioCartasServico));
         retorno.put("paginas-estaticas", estaticas.importar(repositorioCartasServico));
-        retorno.put("paginas-tematicas", tematicas.importar(repositorioCartasServico));
-        retorno.put("orgaos", orgaos.importar(repositorioCartasServico));
+//        retorno.put("paginas-tematicas", tematicas.importar(repositorioCartasServico));
+//        retorno.put("orgaos", orgaos.importar(repositorioCartasServico));
 
         log.info("Importação concluída com sucesso");
         ImportadorHealthIndicator.importacaoConcluida();
