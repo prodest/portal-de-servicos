@@ -1,6 +1,6 @@
 # Princípios de design
 
-#### 1. Consistência com os demais portais do Governo Federal
+#### 1. Consistência com os demais portais do Governo do Estado do Espírito Santo
 Consistência é um dos fatores mais importantes quando se tratam de usuários principiantes, e no caso do Portal de Serviços, os usuários compreendem desde as pessoas mais simples até usuários avançados.
 
 #### 2. Conteúdo útil em primeiro lugar

@@ -77,8 +77,8 @@ class ServicoController {
     }
 
     @RequestMapping(value = "/servico/{id}", method = GET)
-    ModelAndView get(@PathVariable("id") ServicoXML servico) {
-        return new ModelAndView("servico", "servico", servico);
+    ModelAndView get(@PathVariable("id")  String servico) {
+        return new ModelAndView("servico", "servico", servicos.findById(servico));
     }
 
     @RequestMapping(value = "/servico/{id}.json", method = GET, produces = "application/json")

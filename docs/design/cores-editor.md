@@ -12,7 +12,7 @@
 }
 </style>
  
-Definimos as cores a serem utilizadas no site do Portal de Serviços com base no [tema branco] do [Manual de Identidade Visual do Governo Federal][estilos].
+Definimos as cores a serem utilizadas no site do Portal de Serviços com base no [tema branco] do [Manual de Identidade Visual do Governo do Estado do Espírito Santo][estilos].
 
 Foram cinco cores definidas para estilizar o site, e estas são utilizadas com o objetivo de proporcionar uma melhor legibilidade, organização, contraste e acessibilidade das informações. 
 

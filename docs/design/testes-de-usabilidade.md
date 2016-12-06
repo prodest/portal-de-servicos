@@ -24,7 +24,7 @@ Uma das partes cruciais na realização de um teste de usabilidade é a definiç
 
 No caso do Portal de Serviços, nosso público é extenso e abrange todos os cidadãos brasileiros que utilizam (ou poderiam utilizar) serviços públicos através da internet (atualmente 90 MI de brasileiros são considerados usuários ativos da internet no Brasil - Dados: Comscore 2014). 
 
-É importante lembrar que o Portal de Serviços é parte do Governo Federal e trata de serviços públicos, portanto precisamos que a sua interface seja o mais inclusiva e acessível quanto possível, pois parte de seus usuários são pessoas com pouca experiência no uso de sites, assim como pessoas com deficiências físicas.
+É importante lembrar que o Portal de Serviços é parte do Governo do Estado do Espírito Santo e trata de serviços públicos, portanto precisamos que a sua interface seja o mais inclusiva e acessível quanto possível, pois parte de seus usuários são pessoas com pouca experiência no uso de sites, assim como pessoas com deficiências físicas.
 
 Os testes de usabilidade no Portal de Serviços terão sua amostra de usuários formada por:
 

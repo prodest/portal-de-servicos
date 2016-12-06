@@ -4,12 +4,12 @@ Em _runtime_, temos as seguintes dependências de ambientes e aplicações geren
 
 ## [Piwik]
 
-A instância do [Piwik] utilizada no Governo Federal fornece métricas e relatórios sobre as mesmas para a aplicação e para a [equipe de desenvolvimento](../sobre-o-projeto/equipe.md). 
+A instância do [Piwik] utilizada no Governo do Estado do Espírito Santo fornece métricas e relatórios sobre as mesmas para a aplicação e para a [equipe de desenvolvimento](../sobre-o-projeto/equipe.md). 
 
 [Piwik]:http://www.piwik.org
 
 ## [Barra Brasil]
 
-A [Barra Brasil] é utilizada em todos os sites do Governo Federal, e oferece um _look'n'feel_ padronizado para a navegação entre eles.
+A [Barra Brasil] é utilizada em todos os sites do Governo do Estado do Espírito Santo, e oferece um _look'n'feel_ padronizado para a navegação entre eles.
 
 [Barra Brasil]:http://barra.brasil.gov.br/

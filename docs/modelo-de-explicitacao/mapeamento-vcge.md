@@ -615,7 +615,7 @@ A antiga plataforma de serviços utilizava uma categorização de serviços defi
 |Governo e Política|Administração|
 |Governo eletrônico|Administração, Serviços Públicos|
 |Governo estadual|Administração|
-|Governo federal|Administração|
+|Governo do Estado do Espírito Santo|Administração|
 |Governo municipal|Administração|
 |Governo móvel|Administração, Serviços Públicos|
 |Graduação|Educação, Educação superior|

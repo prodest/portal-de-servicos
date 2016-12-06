@@ -25,7 +25,7 @@ WORKDIR build
 RUN ./gradlew assembleMainDist && \
     cp -rf ./build/distributions/*.tar / && \
     mkdir /portal && \
-    tar xvf /*.tar -C /editor --strip-components=1
+    tar xvf /*.tar -C /portal --strip-components=1
     #rm -rf ./build
 EXPOSE 8080
 #run cmd
