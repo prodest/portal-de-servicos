@@ -2,7 +2,7 @@
 
 O projeto do Portal de Serviços conta com duas equipes multi-disciplinares e com formação bastante diversa. A composição de equipes desta forma nos dá uma gama maior de ideias a testar, e em conjunto vivências de praticamente todo o tipo de cidadão a quem queremos atender.
 
-## Governo Federal
+## Governo do Estado do Espírito Santo
 
 ### [Ministério do Planejamento, Orçamento e Gestão](http://planejamento.gov.br)
 

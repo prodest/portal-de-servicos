@@ -25,7 +25,7 @@ Source0:            %{_sourcedir}/%{name}-%{version}.jar
 Source1:            %{_sourcedir}/portal-de-servicos.default.config
 
 %description
-Portal de Servicos do Governo Federal do Brasil
+Portal de Servicos do Governo do Estado do Espírito Santo do Brasil
 
 %prep
 
